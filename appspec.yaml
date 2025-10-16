@@ -1,0 +1,14 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: <TASK_DEFINITION>
+        LoadBalancerInfo:
+          ContainerName: "webapp"
+          ContainerPort: 80
+
+          cd /Workshop/aws-ci_cd-devops
+git add appspec.yaml
+git commit -m "Adding AppSpec"
+git push -u origin main
